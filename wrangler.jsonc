@@ -4,23 +4,16 @@
 	"main": "./src/worker.ts",
 	"compatibility_date": "2026-02-24",
 	"compatibility_flags": ["nodejs_compat"],
-
-	// ✅ 新增：关闭强制Passkey，彻底解决Windows安全密钥弹窗 + 验证失败
 	"vars": {
-		"SKIP_WEBAUTHN_VERIFICATION": "true",
-		"ALLOW_LOCAL_AUTH": "true"
-        "DISABLE_WEBAUTHN": "true"
+		"DISABLE_WEBAUTHN": "true"
 	},
-
-	// D1 数据库（你的真实ID）
 	"d1_databases": [
 		{
 			"binding": "DB",
 			"database_name": "my-emdash-site",
-			"database_id": "fee9dcc7-b11e-4805-aae5-4c750648215b"
+			"database_id": "626dc273-f3e1-4e9e-b809-bf51aa72a7d3"
 		}
 	],
-	// R2 存储
 	"r2_buckets": [
 		{
 			"binding": "MEDIA",
@@ -28,7 +21,6 @@
 			"preview_bucket_name": "my-emdash-media"
 		}
 	],
-	// KV 会话（已修复）
 	"kv_namespaces": [
 		{
 			"binding": "SESSION",
