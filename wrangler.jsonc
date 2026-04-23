@@ -9,6 +9,7 @@
 	"vars": {
 		"SKIP_WEBAUTHN_VERIFICATION": "true",
 		"ALLOW_LOCAL_AUTH": "true"
+        "DISABLE_WEBAUTHN": "true"
 	},
 
 	// D1 数据库（你的真实ID）
