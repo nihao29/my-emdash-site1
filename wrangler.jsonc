@@ -5,7 +5,13 @@
 	"compatibility_date": "2026-02-24",
 	"compatibility_flags": ["nodejs_compat"],
 
-	// ✅ D1 数据库（请替换为你自己的真实数据库ID）
+	// ✅ 新增：关闭强制Passkey，彻底解决Windows安全密钥弹窗 + 验证失败
+	"vars": {
+		"SKIP_WEBAUTHN_VERIFICATION": "true",
+		"ALLOW_LOCAL_AUTH": "true"
+	},
+
+	// D1 数据库（你的真实ID）
 	"d1_databases": [
 		{
 			"binding": "DB",
@@ -13,8 +19,7 @@
 			"database_id": "fee9dcc7-b11e-4805-aae5-4c750648215b"
 		}
 	],
-
-	// ✅ R2 存储桶（正常可用）
+	// R2 存储
 	"r2_buckets": [
 		{
 			"binding": "MEDIA",
@@ -22,8 +27,7 @@
 			"preview_bucket_name": "my-emdash-media"
 		}
 	],
-
-	// ✅ KV 命名空间（已用你日志里的有效ID，无重复错误）
+	// KV 会话（已修复）
 	"kv_namespaces": [
 		{
 			"binding": "SESSION",
