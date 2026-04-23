@@ -4,18 +4,30 @@
 	"main": "./src/worker.ts",
 	"compatibility_date": "2026-02-24",
 	"compatibility_flags": ["nodejs_compat"],
+
+	// ✅ D1 数据库（请替换为你自己的真实数据库ID）
 	"d1_databases": [
 		{
 			"binding": "DB",
 			"database_name": "my-emdash-site",
-			"database_id": "626dc273-f3e1-4e9e-b809-bf51aa72a7d3"
+			"database_id": "fee9dcc7-b11e-4805-aae5-4c750648215b"
 		}
 	],
+
+	// ✅ R2 存储桶（正常可用）
 	"r2_buckets": [
 		{
 			"binding": "MEDIA",
 			"bucket_name": "my-emdash-media",
 			"preview_bucket_name": "my-emdash-media"
+		}
+	],
+
+	// ✅ KV 命名空间（已用你日志里的有效ID，无重复错误）
+	"kv_namespaces": [
+		{
+			"binding": "SESSION",
+			"id": "9a0813c1eb8e43128cb6119a8dc7c13f"
 		}
 	]
 }
